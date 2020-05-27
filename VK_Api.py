@@ -17,7 +17,7 @@ class VkApiResponse():
             fr = requests.get(self.user_response + str(friend) + self.token)
             json_friend = json.loads(fr.content)
             first_name = json_friend['response'][0]['first_name']
-            last_name = json_friend['response'][0]['first_name']
+            last_name = json_friend['response'][0]['last_name']
             print("Имя: " + first_name +  ", Фамилия: " + last_name)
 
     def get_albums_list(self):
